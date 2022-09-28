@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+  </head>
+  <body>
+  <button id="win" type="button">
+      Виграти
+  </button>
+  <button id="lose" type="button">
+      Програти
+  </button>
+  </body>
+  <script>
+    let loseBtn = document.getElementById("lose");
+    function showAlert() {
+      alert("нехай щастить");
+    }
+    loseBtn.onclick = showAlert
+
+    let winBtn = document.getElementById("win");
+    let yPos = 0;
+    function changeWinBtnLocation() {
+      yPos += 100;
+      winBtn.style.position = "absolute";
+      winBtn.style.top = yPos+ 'px';
+    }
+    winBtn.onmouseover = changeWinBtnLocation;
+  </script>
+</html>
